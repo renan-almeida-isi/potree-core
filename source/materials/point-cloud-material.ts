@@ -42,8 +42,6 @@ import {
 } from './texture-generation';
 import {IClassification, IGradient, IUniform} from './types';
 import {ColorEncoding} from './color-encoding';
-// import { VertShader } from './shaders/pointcloud_vs.js'
-// import { FragShader } from './shaders/pointcloud_fs.js'
 import VertShader from './shaders/pointcloud.vs?raw'
 import FragShader from './shaders/pointcloud.fs?raw'
 // const VertShader = require('./shaders/pointcloud.vs').default;
