@@ -1,3 +1,6 @@
 import {handleMessage} from './binary-decoder-worker-internal.ts';
-
-onmessage = handleMessage;
+class ClassicWorker {
+  onmessage = handleMessage;
+  postMessage = console.log;
+}
+export { ClassicWorker };

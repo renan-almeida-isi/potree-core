@@ -42,9 +42,12 @@ import {
 } from './texture-generation';
 import {IClassification, IGradient, IUniform} from './types';
 import {ColorEncoding} from './color-encoding';
-
-const VertShader = require('./shaders/pointcloud.vs').default;
-const FragShader = require('./shaders/pointcloud.fs').default;
+// import { VertShader } from './shaders/pointcloud_vs.js'
+// import { FragShader } from './shaders/pointcloud_fs.js'
+import VertShader from './shaders/pointcloud.vs?raw'
+import FragShader from './shaders/pointcloud.fs?raw'
+// const VertShader = require('./shaders/pointcloud.vs').default;
+// const FragShader = require('./shaders/pointcloud.fs').default;
 
 export interface IPointCloudMaterialParameters {
   size: number;
@@ -427,7 +430,7 @@ export class PointCloudMaterial extends RawShaderMaterial
   {
   	this.glslVersion = GLSL3;
 
-  	this.vertexShader = this.applyDefines(VertShader);
+		this.vertexShader = this.applyDefines(VertShader);
   	this.fragmentShader = this.applyDefines(FragShader);
 
   	if (this.opacity === 1.0) 

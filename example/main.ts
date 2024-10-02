@@ -68,11 +68,12 @@ document.body.onload = function()
 		}
 	};
 	
-	loadPointCloud('/data/lion_takanawa/', 'cloud.js', new Vector3(-4, -2, 5), new Euler(-Math.PI / 2, 0, 0));
-	loadPointCloud('/data/pump/', 'metadata.json', new Vector3(0, -1.5, 3), new Euler(-Math.PI / 2, 0, 0), new Vector3(2, 2, 2));
+	loadPointCloud('data/lion_takanawa/', 'cloud.js', new Vector3(-4, -2, 5), new Euler(-Math.PI / 2, 0, 0));
+	loadPointCloud('data/pump/', 'metadata.json', new Vector3(0, -1.5, 3), new Euler(-Math.PI / 2, 0, 0), new Vector3(2, 2, 2));
 	
 	function loadPointCloud(baseUrl: string, url: string, position?: Vector3, rotation?: Euler, scale?: Vector3)
 	{
+		
 			potree.loadPointCloud(url, url => `${baseUrl}${url}`,).then(function(pco: PointCloudOctree)
 			{
 				pco.material.size = 1.0;
