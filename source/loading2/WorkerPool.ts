@@ -1,7 +1,7 @@
 // const BrotliDecoderWorker = require('./brotli-decoder.worker.js').default;
 // const DecoderWorker = require('./decoder.worker.js').default;
-import {BrotliDecoderWorker}  from './brotli-decoder.worker.js';
-import {DecoderWorker}  from './decoder.worker.js';
+import BrotliDecoderWorker  from './brotli-decoder.worker.js?worker';
+import DecoderWorker  from './decoder.worker.js?worker';
 // Create enums for different types of workers
 export enum WorkerType {
 	DECODER_WORKER_BROTLI = 'DECODER_WORKER_BROTLI',

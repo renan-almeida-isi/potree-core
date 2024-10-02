@@ -64,7 +64,6 @@ export class Potree implements IPotree
 		if (url === 'cloud.js') 
 		{
 			return await loadPOC(url, getUrl, xhrRequest).then((geometry) => {
-				console.log(geometry);
 				return new PointCloudOctree(this, geometry);
 			});
 		}
